@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hari Baskar T | Software Developer</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fb; color: #333; }
+    header { background: #0f172a; color: #fff; padding: 40px 20px; text-align: center; }
+    header h1 { margin: 10px 0 0; font-size: 36px; }
+    header p { font-size: 18px; margin: 10px 0; }
+    header a { display: inline-block; margin: 10px; padding: 10px 18px; background: #2563eb; color: #fff; text-decoration: none; border-radius: 6px; }
+
+    .profile-pic { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid #2563eb; margin-bottom: 10px; }
+
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    h2 { border-bottom: 3px solid #2563eb; display: inline-block; padding-bottom: 6px; }
+
+    .skills-grid, .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 5px 12px rgba(0,0,0,0.08); }
+    .card h3 { margin-top: 0; color: #2563eb; }
+
+    ul { padding-left: 20px; }
+
+    footer { background: #0f172a; color: #fff; text-align: center; padding: 20px; }
+
+    .contact a { color: #2563eb; text-decoration: none; }
+  
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header, section {
+      animation: fadeUp 0.8s ease-in-out both;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 22px rgba(0,0,0,0.15);
+    }
+
+    nav a {
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+      border-bottom: 2px solid #60a5fa;
+      padding-bottom: 4px;
+    }
+
+    header a {
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    header a:hover {
+      transform: scale(1.08);
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+
+<nav style="background:#020617; padding:12px; text-align:center; position:sticky; top:0; z-index:1000;">
+  <a href="#about" style="color:white; margin:12px; text-decoration:none; font-weight:bold;">About</a>
+  <a href="#skills" style="color:white; margin:12px; text-decoration:none; font-weight:bold;">Skills</a>
+  <a href="#projects" style="color:white; margin:12px; text-decoration:none; font-weight:bold;">Projects</a>
+  <a href="#experience" style="color:white; margin:12px; text-decoration:none; font-weight:bold;">Experience</a>
+  <a href="#contact" style="color:white; margin:12px; text-decoration:none; font-weight:bold;">Contact</a>
+</nav>
+
+<header>
+  <img src="photo.jpg" alt="Hari Baskar" class="profile-pic" />
+  <h1>Hari Baskar T</h1>
+  <p>Software Developer | Java | Spring Boot | Backend</p>
+  <p>Motivated Software Developer skilled in Java, Spring Boot, MySQL, and REST APIs. Experienced in building scalable backend systems through internships and real-time projects.</p>
+  <a href="#projects">View Projects</a>
+  <a href="Hari - Software.pdf" download>Download Resume</a>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a B.Sc. Computer Science graduate and Java Full Stack Developer with hands-on experience in backend development using Java, Spring Boot, REST APIs, and MySQL. I completed a 3-month internship at Aspire Systems where I worked in Agile teams, debugged backend issues, tested APIs, and improved code quality. I enjoy solving problems, learning new technologies, and building clean, scalable applications.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="card">
+      <h3>Backend & Languages</h3>
+      <ul>
+        <li>Java (Core Java, Collections)</li>
+        <li>Spring Boot, Spring MVC</li>
+        <li>Hibernate, JPA</li>
+        <li>REST APIs</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Database</h3>
+      <ul>
+        <li>MySQL</li>
+        <li>Oracle SQL</li>
+        <li>PL/SQL</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Web Technologies</h3>
+      <ul>
+        <li>HTML5, CSS</li>
+        <li>JSP, Servlet</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Tools</h3>
+      <ul>
+        <li>Git, GitHub</li>
+        <li>Postman</li>
+        <li>Maven</li>
+        <li>IntelliJ, Eclipse</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+
+    <div class="card">
+      <h3>Employment Management System</h3>
+      <p><strong>Tech Stack:</strong> Java, Spring Boot, REST API, MySQL, Postman</p>
+      <p>
+        A Spring Boot–based REST API application for managing employee information. Implemented RESTful APIs, designed optimized MySQL schema, and tested endpoints using Postman. Added proper HTTP status handling, logging, and custom error messages. Followed Agile practices and maintained clean, reusable, and scalable code.
+      </p>
+      <a href="https://github.com/Haribaskargitip" target="_blank">GitHub Repo</a>
+    </div>
+
+    <div class="card">
+      <h3>Student Management System</h3>
+      <p><strong>Tech Stack:</strong> Java, Spring MVC, Hibernate, MySQL</p>
+      <p>
+        A full-stack CRUD application for managing student records. Built backend logic using Spring MVC and Hibernate. Designed normalized MySQL schema using Hibernate annotations. Implemented CRUD operations, validation, exception handling, and MVC architecture. Tested APIs and features using Postman and JUnit.
+      </p>
+      <a href="https://github.com/Haribaskargitip" target="_blank">GitHub Repo</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <h3>Aspire Systems (India) Pvt Ltd – Trainee (Apr 2025 – Jul 2025)</h3>
+    <ul>
+      <li>Worked in Agile teams to solve real-world coding problems</li>
+      <li>Debugged backend issues and tested REST APIs using Postman</li>
+      <li>Improved code quality with testing and exception handling</li>
+      <li>Participated in sprint planning and code reviews</li>
+    </ul>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications</h2>
+  <ul>
+    <li>Java Full Stack Development – JSpiders (2024–2025)</li>
+    <li>Accenture Australia – Technology Consulting Simulation (Forage)</li>
+    <li>Trainee – Aspire Systems</li>
+  </ul>
+</section>
+
+<section id="photography">
+  <h2>Photography</h2>
+  <div class="card">
+    <p>
+      Photography is my personal creative hobby. I enjoy capturing nature, street moments, and everyday life through my lens. It helps me stay observant, patient, and creative — skills that also reflect in my problem‑solving approach as a developer.
+    </p>
+    <p><em>(Photography showcase coming soon)</em></p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:haribaskart0009@gmail.com">haribaskart0009@gmail.com</a></p>
+  <p>Phone: +91-6379999822</p>
+  <p>GitHub: <a href="https://github.com/Haribaskargitip" target="_blank">github.com/Haribaskargitip</a></p>
+  <p>Location: Vellore, India</p>
+</section>
+
+<footer>
+  <p>© 2026 Hari Baskar T | Software Developer</p>
+</footer>
+
+</body>
+</html>
