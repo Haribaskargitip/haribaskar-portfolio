@@ -98,3 +98,39 @@ document.querySelectorAll(".skill-card").forEach((card) => {
   });
   meterObserver.observe(card);
 });
+/* ========================= */
+/* Floating Hero Animation */
+/* ========================= */
+
+const heroTitle = document.querySelector(".hero-content h2");
+
+if (heroTitle) {
+  heroTitle.animate(
+    [
+      { transform: "translateY(0px)" },
+      { transform: "translateY(-10px)" },
+      { transform: "translateY(0px)" }
+    ],
+    {
+      duration: 4000,
+      iterations: Infinity
+    }
+  );
+}
+
+/* ========================= */
+/* Mouse Parallax Background */
+/* ========================= */
+
+document.addEventListener("mousemove", (e) => {
+
+  const bg = document.querySelector(".background-3d");
+
+  if (!bg) return;
+
+  const x = (e.clientX / window.innerWidth - 0.5) * 20;
+  const y = (e.clientY / window.innerHeight - 0.5) * 20;
+
+  bg.style.transform =
+    `translate(${x}px, ${y}px)`;
+});
