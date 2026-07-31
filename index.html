@@ -3,15 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Hari Baskar T portfolio - Java, Spring Boot, MySQL, REST API Developer."
-  />
+  <meta name="description" content="Hari Baskar T portfolio - Java, Spring Boot, MySQL, REST API Developer." />
   <meta property="og:title" content="Hari Baskar T | Software Developer Portfolio" />
-  <meta
-    property="og:description"
-    content="Java, Spring Boot, MySQL, and REST API developer with internship and project experience."
-  />
+  <meta property="og:description" content="Java, Spring Boot, MySQL, and REST API developer with internship and project experience." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="preview-card.svg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -19,33 +13,34 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <body>
 
-<div class="background-3d"></div>
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="loader-ring">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="loader-logo">HB</div>
+      <span class="loader-text">Initializing Portfolio...</span>
+    </div>
+  </div>
 
-<div class="particles">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
+  <!-- 3D Animated Background Canvas -->
+  <div class="background-3d">
+    <canvas id="bg-canvas-3d"></canvas>
+  </div>
 
-<header class="topbar">
+  <!-- HEADER -->
   <header class="topbar">
     <div class="container nav">
-      <h1 class="logo">Hari Baskar T</h1>
+      <a href="#" class="logo">Hari <span>Baskar T</span></a>
       <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -57,173 +52,370 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-content">
-        <p class="tag">Software Developer</p>
-        <h2>Building clean and scalable backend applications.</h2>
-        <p>
-          Java, Spring Boot, MySQL, and REST API developer with Agile team experience
-          and strong debugging skills.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn ghost" href="#contact">Contact Me</a>
-          <a class="btn ghost" href="Hari-baskar.pdf" download>Download Resume</a>
-        </div>
-      </div>
-    </section>
 
-    <section id="about" class="section">
-      <div class="container">
-        <h3>About Me</h3>
-        <p>
-          Motivated Software Developer with hands-on experience in Java, Spring Boot,
-          MySQL, and REST APIs. I focus on writing maintainable code, solving backend
-          issues efficiently, and delivering high-quality software in Agile teams.
-        </p>
-      </div>
-    </section>
-
-    <section id="skills" class="section alt">
-      <div class="container">
-        <h3>Technical Skills</h3>
-        <div class="chips">
-          <span>Java</span>
-          <span>Spring Boot</span>
-          <span>Spring MVC</span>
-          <span>Hibernate</span>
-          <span>MySQL</span>
-          <span>Oracle SQL</span>
-          <span>PL/SQL</span>
-          <span>REST APIs</span>
-          <span>PHP</span>
-          <span>Laravel</span>
-          <span>Git</span>
-          <span>Postman</span>
-          <span>Maven</span>
-          <span>JUnit</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="what-i-do" class="section">
-      <div class="container">
-        <h3>What I Do</h3>
-        <div class="what-grid">
-          <article class="card">
-            <h4>Backend Development</h4>
-            <p>Build modular backend services using Java, Spring Boot, and MVC architecture.</p>
-          </article>
-          <article class="card">
-            <h4>API Engineering</h4>
-            <p>Design and test REST APIs with proper status codes, validation, and exception handling.</p>
-          </article>
-          <article class="card">
-            <h4>Database Design</h4>
-            <p>Create normalized schemas and optimize SQL queries for reliable and fast data operations.</p>
-          </article>
-          <article class="card">
-            <h4>Debugging & Quality</h4>
-            <p>Use Postman, logs, and test-driven checks to identify bugs and improve software quality.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section">
-      <div class="container">
-        <h3>Experience</h3>
-        <article class="card">
-          <div class="row">
-            <h4>PJN Technologies Pvt Ltd - Intern</h4>
-            <p>Present | Bengaluru</p>
+    <!-- HERO -->
+    <section class="hero reveal">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge-tag">
+            <span class="pulse-dot"></span>
+            Available for Internships & Positions
           </div>
-          <p>Currently I am working in this company as a Software Developer Intern.</p>
-          <ul>
-            <li>Developing and maintaining backend modules for internal business applications.</li>
-            <li>Building and testing REST APIs with proper request validation and error handling.</li>
-            <li>Working with MySQL queries and optimizing data operations for better performance.</li>
-            <li>Collaborating with team members in Agile sprints, code reviews, and daily updates.</li>
-          </ul>
-        </article>
-        <br />
-        <article class="card">
-          <div class="row">
-            <h4>Aspire Systems (India) Pvt Ltd - Intern</h4>
-            <p>Apr 2025 - Jul 2025 | Vellore</p>
+          <h2>Building robust & scalable <span class="text-gradient">backend systems</span></h2>
+          <p class="hero-desc">
+            Hi, I am a Software Developer specializing in Java, Spring Boot, MySQL, and REST APIs. Focused on architecting clean code, optimizing database performance, and delivering high-quality business applications in Agile teams.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="btn outline" href="#contact">Contact Me</a>
+            <a class="btn outline" href="Hari-baskar.pdf" download><i class="fa-solid fa-file-pdf"></i> Resume</a>
           </div>
-          <ul>
-            <li>Collaborated in Agile teams on real-world coding tasks.</li>
-            <li>Debugged backend issues and validated APIs with Postman.</li>
-            <li>Improved code quality with testing and exception handling.</li>
-            <li>Participated in sprint planning, code reviews, and documentation.</li>
-          </ul>
-        </article>
+        </div>
+        <div class="hero-visual">
+          <div class="photo-frame-3d">
+            <div class="photo-card code-window">
+              <div class="sheen"></div>
+              <div class="code-header">
+                <div class="window-buttons">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="window-title">HariBaskar.java</span>
+              </div>
+              <div class="code-body">
+                <pre><code><span class="token keyword">public class</span> <span class="token class-name">HariBaskar</span> {
+  <span class="token keyword">private String</span> role = <span class="token string">"Developer"</span>;
+  <span class="token keyword">private String[]</span> stack = {
+    <span class="token string">"Java"</span>, <span class="token string">"Spring Boot"</span>,
+    <span class="token string">"MySQL"</span>, <span class="token string">"REST APIs"</span>
+  };
+
+  <span class="token keyword">public void</span> <span class="token function">code</span>() {
+    System.out.println(<span class="token string">"Building clean, scalable backend systems..."</span>);
+  }
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="projects" class="section alt">
+    <!-- ABOUT & STATS -->
+    <section id="about" class="section reveal">
       <div class="container">
-        <h3>Projects</h3>
-        <div class="grid">
-          <article class="card">
-            <h4>Employment Management System</h4>
+        <span class="section-tag">Overview</span>
+        <h3 class="section-title">About Me</h3>
+        <div class="about-grid">
+          <div class="about-info">
             <p>
-              Spring Boot based REST API system for employee data management with
-              MySQL schema design, logging, error handling, and API testing.
+              I am a results-oriented Software Developer with hands-on experience crafting reliable backend software. My tech stack revolves around Java development, relational databases (MySQL, Oracle SQL), and integrating structured RESTful APIs.
             </p>
+            <p>
+              I focus on code maintainability, logging with SLF4J, and automated verification with JUnit. Having collaborated in Agile team structures at both PJN Technologies and Aspire Systems, I am skilled at translating requirements into robust database designs and application modules.
+            </p>
+          </div>
+          <div class="about-stats-panel">
+            <div class="stat-card card">
+              <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
+              <div class="stat-details">
+                <h4>Java & Spring Boot</h4>
+                <p>Enterprise framework design</p>
+              </div>
+            </div>
+            <div class="stat-card card">
+              <div class="stat-icon"><i class="fa-solid fa-database"></i></div>
+              <div class="stat-details">
+                <h4>SQL Optimization</h4>
+                <p>Normalisation & fast querying</p>
+              </div>
+            </div>
+            <div class="stat-card card">
+              <div class="stat-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <div class="stat-details">
+                <h4>API Orchestration</h4>
+                <p>REST patterns & validation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT I DO -->
+    <section id="what-i-do" class="section reveal">
+      <div class="container">
+        <span class="section-tag">Core Competencies</span>
+        <h3 class="section-title">What I Do</h3>
+        <div class="what-grid">
+          <article class="card service-card">
+            <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+            <h4>Backend Development</h4>
+            <p>Developing modular service architectures using Spring Boot, Hibernate, and MVC patterns to guarantee software extendibility.</p>
+          </article>
+          <article class="card service-card">
+            <div class="service-icon"><i class="fa-solid fa-route"></i></div>
+            <h4>API Engineering</h4>
+            <p>Designing structured REST APIs featuring custom request validation, error filters, and standard HTTP response handling.</p>
+          </article>
+          <article class="card service-card">
+            <div class="service-icon"><i class="fa-solid fa-table"></i></div>
+            <h4>Database Design</h4>
+            <p>Creating efficient database schemas, implementing keys, indexing tables, and tuning raw queries in MySQL and Oracle SQL.</p>
+          </article>
+          <article class="card service-card">
+            <div class="service-icon"><i class="fa-solid fa-bug-slash"></i></div>
+            <h4>Debugging & QA</h4>
+            <p>Troubleshooting anomalies, utilizing Postman environments, verifying logs, and writing JUnit test checks for overall QA.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section alt reveal">
+      <div class="container">
+        <span class="section-tag">Capabilities</span>
+        <h3 class="section-title">Technical Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-category card">
+            <div class="category-header">
+              <i class="fa-solid fa-laptop-code"></i>
+              <h4>Frameworks & Languages</h4>
+            </div>
+            <div class="chips">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>Spring MVC</span>
+              <span>Hibernate</span>
+              <span>PHP</span>
+              <span>Laravel</span>
+            </div>
+          </div>
+          <div class="skill-category card">
+            <div class="category-header">
+              <i class="fa-solid fa-database"></i>
+              <h4>Database Systems</h4>
+            </div>
+            <div class="chips">
+              <span>MySQL</span>
+              <span>Oracle SQL</span>
+              <span>PL/SQL</span>
+              <span>SQL Tuning</span>
+            </div>
+          </div>
+          <div class="skill-category card">
+            <div class="category-header">
+              <i class="fa-solid fa-gears"></i>
+              <h4>Testing & Tooling</h4>
+            </div>
+            <div class="chips">
+              <span>Git</span>
+              <span>Postman</span>
+              <span>Maven</span>
+              <span>JUnit</span>
+              <span>REST APIs</span>
+              <span>Log Analysis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE TIMELINE -->
+    <section id="experience" class="section reveal">
+      <div class="container">
+        <span class="section-tag">History</span>
+        <h3 class="section-title">Experience</h3>
+        
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+          
+          <div class="timeline-item left">
+            <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="timeline-content card">
+              <div class="timeline-header">
+                <span class="duration-badge">Present</span>
+                <h4>Software Developer Intern</h4>
+                <h5>PJN Technologies Pvt Ltd <span class="location">• Bengaluru</span></h5>
+              </div>
+              <ul class="experience-list">
+                <li>Developing and maintaining backend modules for internal business applications.</li>
+                <li>Building and testing REST APIs with proper request validation and error handling.</li>
+                <li>Working with MySQL queries and optimizing data operations for better performance.</li>
+                <li>Collaborating with team members in Agile sprints, code reviews, and daily updates.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="timeline-content card">
+              <div class="timeline-header">
+                <span class="duration-badge">Apr 2025 – Jul 2025</span>
+                <h4>Software Developer Intern</h4>
+                <h5>Aspire Systems (India) Pvt Ltd <span class="location">• Vellore</span></h5>
+              </div>
+              <ul class="experience-list">
+                <li>Collaborated in Agile teams on real-world coding tasks.</li>
+                <li>Debugged backend issues and validated APIs with Postman.</li>
+                <li>Improved code quality with testing and exception handling.</li>
+                <li>Participated in sprint planning, code reviews, and documentation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt reveal">
+      <div class="container">
+        <span class="section-tag">Portfolio</span>
+        <h3 class="section-title">Projects</h3>
+        <div class="projects-grid">
+          <article class="card project-card">
+            <div class="project-header">
+              <div class="window-buttons">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="project-icon"><i class="fa-solid fa-server"></i></span>
+            </div>
+            <h4>Employment Management System</h4>
+            <p>Spring Boot based REST API system for employee data management with MySQL schema design, logging, error handling, and API testing.</p>
             <div class="project-tags">
               <span>Java</span>
               <span>Spring Boot</span>
               <span>MySQL</span>
               <span>REST API</span>
             </div>
-            <a href="https://github.com/Haribaskargitip" target="_blank" rel="noreferrer">
-              View on GitHub
-            </a>
+            <div class="project-footer">
+              <a href="https://github.com/Haribaskargitip" target="_blank" rel="noreferrer" class="project-link">
+                <i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
           </article>
 
-          <article class="card">
+          <article class="card project-card">
+            <div class="project-header">
+              <div class="window-buttons">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="project-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+            </div>
             <h4>Student Management System</h4>
-            <p>
-              Full-stack system using Spring MVC and Hibernate featuring CRUD
-              operations, validation, exception handling, and JUnit testing.
-            </p>
+            <p>Full-stack system using Spring MVC and Hibernate featuring CRUD operations, validation, exception handling, and JUnit testing.</p>
             <div class="project-tags">
               <span>Java</span>
               <span>Spring MVC</span>
               <span>Hibernate</span>
               <span>JUnit</span>
             </div>
-            <a href="https://github.com/Haribaskargitip" target="_blank" rel="noreferrer">
-              View on GitHub
-            </a>
+            <div class="project-footer">
+              <a href="https://github.com/Haribaskargitip" target="_blank" rel="noreferrer" class="project-link">
+                <i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
       <div class="container">
-        <h3>Contact</h3>
-        <p>Vellore, Tamil Nadu</p>
-        <div class="links">
-          <a href="mailto:haribaskart0009@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>haribaskart0009@gmail.com</span></a>
-          <a href="tel:+916379999822"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+91 63799 99822</span></a>
-          <a href="https://github.com/Haribaskargitip" target="_blank" rel="noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
-          <a href="https://www.linkedin.com/in/hari-baskar-t-602677295/" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
-          <a href="https://www.instagram.com/hari_baskar_thangamani" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+        <span class="section-tag">Get In Touch</span>
+        <h3 class="section-title">Contact</h3>
+        
+        <div class="contact-grid">
+          <div class="contact-info-panel">
+            <h4>Let's build something scalable!</h4>
+            <p>I am actively seeking backend developer roles and internships. If you have any inquiries or want to discuss a project, feel free to reach out.</p>
+            
+            <div class="contact-details">
+              <div class="detail-item">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <div>
+                  <h5>Location</h5>
+                  <p>Vellore, Tamil Nadu</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <h5>Email</h5>
+                  <a href="mailto:haribaskart0009@gmail.com">haribaskart0009@gmail.com</a>
+                </div>
+              </div>
+              <div class="detail-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <h5>Phone</h5>
+                  <a href="tel:+916379999822">+91 63799 99822</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="social-row">
+              <a href="https://www.linkedin.com/in/hari-baskar-t-602677295/" target="_blank" rel="noreferrer" class="social-icon-btn linkedin" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/Haribaskargitip" target="_blank" rel="noreferrer" class="social-icon-btn github" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.instagram.com/hari_baskar_thangamani" target="_blank" rel="noreferrer" class="social-icon-btn instagram" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="contact-form-panel card">
+            <h4>Send A Message</h4>
+            <form id="contact-form" autocomplete="off" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name">Name</label>
+                  <input type="text" id="form-name" name="name" placeholder="John Doe" required />
+                  <span class="error-msg"><i class="fa-solid fa-triangle-exclamation"></i> Please enter your name</span>
+                </div>
+                <div class="form-group">
+                  <label for="form-email">Email</label>
+                  <input type="email" id="form-email" name="email" placeholder="john@example.com" required />
+                  <span class="error-msg"><i class="fa-solid fa-triangle-exclamation"></i> Please enter a valid email</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="form-subject">Subject</label>
+                <input type="text" id="form-subject" name="subject" placeholder="Job Opportunity / Project" required />
+                <span class="error-msg"><i class="fa-solid fa-triangle-exclamation"></i> Please enter a subject</span>
+              </div>
+              <div class="form-group">
+                <label for="form-message">Message</label>
+                <textarea id="form-message" name="message" rows="4" placeholder="Hello Hari, I am interested in..." required></textarea>
+                <span class="error-msg"><i class="fa-solid fa-triangle-exclamation"></i> Please enter your message</span>
+              </div>
+              <button type="submit" class="btn primary btn-submit">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <div class="form-status" id="form-status">
+                <!-- Injected via Javascript -->
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
-    <div class="container">
+    <div class="container footer-content">
       <p id="year"></p>
+      <p class="footer-design">Designed & Built with <i class="fa-solid fa-heart animate-pulse"></i> by Hari Baskar T</p>
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
